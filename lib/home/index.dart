@@ -52,21 +52,27 @@ class HomeTab extends StatelessWidget {
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Column(),
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  height: 104,
-                  clipBehavior: Clip.hardEdge,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      color: Colors.black,
-                      style: BorderStyle.solid,
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 8),
+                      Image.asset("assets/images/home/temp.png"),
+                      Text(
+                        "Temperature",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                      Text(
+                        "36°c",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -83,6 +89,30 @@ class HomeTab extends StatelessWidget {
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 12),
+                      Image.asset("assets/images/home/water.png"),
+                      SizedBox(height: 4),
+                      Text(
+                        "Humidity",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                      SizedBox(height: 2),
+                      Text(
+                        "76 %",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Expanded(
@@ -97,6 +127,69 @@ class HomeTab extends StatelessWidget {
                       width: 1,
                     ),
                     borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 8),
+                      Image.asset("assets/images/home/bulb.png"),
+                      SizedBox(height: 0),
+                      Text(
+                        "Light",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                      SizedBox(height: 2),
+                      Text(
+                        "777 Lux",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  height: 104,
+                  clipBehavior: Clip.hardEdge,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      color: Colors.black,
+                      style: BorderStyle.solid,
+                      width: 1,
+                    ),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 8),
+                      Image.asset("assets/images/home/grass.png"),
+                      SizedBox(height: 0),
+                      Text(
+                        "Growth Day",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                      SizedBox(height: 2),
+                      Text(
+                        "Day 1",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                    ],
                   ),
                 ),
               ),

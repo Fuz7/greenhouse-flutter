@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
   const ProfileAppBar({super.key});
 
@@ -21,14 +20,20 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
           children: [
             CircleAvatar(
               radius: 34,
-              backgroundImage: AssetImage('assets/images/prof.png'),
+              backgroundImage: AssetImage('assets/images/logo.png'),
             ),
-            const SizedBox(width: 48),
-            const Text('My App', style: TextStyle(fontSize: 18)),
+            const SizedBox(width: 12),
+            const Text(
+              'SpeedSpark',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-
