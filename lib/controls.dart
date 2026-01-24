@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomeTab extends StatelessWidget {
-  const HomeTab({super.key});
+class ControlScreen extends StatelessWidget {
+  const ControlScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        'Home',
+        'Controll Screen',
         style: TextStyle(fontSize: 24),
       ),
     );
