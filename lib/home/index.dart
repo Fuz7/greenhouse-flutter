@@ -17,6 +17,7 @@ class HomeTab extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
             decoration: BoxDecoration(
               color: Colors.white,
+
               borderRadius: BorderRadius.circular(16),
             ),
             child: Column(
@@ -71,6 +72,7 @@ class HomeTab extends StatelessWidget {
               children: [environmentMonitoring(), controls()],
             ),
           ),
+          activeCrop(context: context),
         ],
       ),
     );
@@ -118,6 +120,7 @@ Widget environmentMonitoring() {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Colors.black, width: 1),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -319,9 +322,11 @@ Widget environmentMonitoring() {
 Widget controls() {
   return Container(
     height: 306,
+
     width: 150,
     decoration: BoxDecoration(
       color: Colors.white,
+      border: Border.all(color: Colors.black, width: 1),
       borderRadius: BorderRadius.circular(16),
     ),
     child: Column(
@@ -419,6 +424,56 @@ Widget controls() {
               ),
             ],
           ),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget activeCrop({required BuildContext context}) {
+  return Container(
+    width: MediaQuery.of(context).size.width * 0.92,
+    margin: EdgeInsets.fromLTRB(12, 20, 12, 80),
+    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+    height: 220,
+    decoration: BoxDecoration(
+      color: Colors.white,
+      border: Border.all(color: Colors.black, width: 1),
+      borderRadius: BorderRadius.circular(8),
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 12,
+              height: 12,
+              decoration: BoxDecoration(
+                color: Colors.green,
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.white, width: 2),
+              ),
+            ),
+            Text(
+              "Active Crop : Pechay Seedlings",
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900),
+            ),
+          ],
+        ),
+        SizedBox(height: 4),
+        Image.asset("assets/images/home/pechay.png"),
+        SizedBox(height: 4),
+        Text(
+          "Bio-Electric Mode Active ",
+          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+        ),
+        SizedBox(height: 16),
+        Text(
+          "Seedling process shock (6 to 7 days traditional cultivating time)",
+          textAlign: TextAlign.center,
+          style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
         ),
       ],
     ),
