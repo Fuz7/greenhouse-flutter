@@ -24,7 +24,7 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
             const SizedBox(width: 12),
             const Text(
-              'SpeedSpark',
+              'SeedSpark',
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.white,

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeTab extends StatelessWidget {
@@ -100,12 +99,12 @@ Widget statCard({
           const SizedBox(height: 4),
           Text(
             title,
-            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+            style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w500),
           ),
           const SizedBox(height: 2),
           Text(
             value,
-            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
           ),
         ],
       ),
@@ -116,202 +115,46 @@ Widget statCard({
 Widget environmentMonitoring() {
   return Expanded(
     child: Container(
-      height: 306,
+      height: 336,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: Colors.black, width: 1),
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-
         children: [
           SizedBox(height: 10),
           Text(
             "Environmental Monitoring",
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
           ),
+          // TOP GROUP
           SizedBox(height: 32),
-          Row(
-            children: [
-              Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(width: 8),
-                      Image.asset(
-                        "assets/images/home/co2.png",
-                        fit: BoxFit.contain,
-                        width: 16,
-                      ),
-                      SizedBox(width: 4),
-                      Text(
-                        "CO2 Level",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 4),
-                  Row(
-                    children: [
-                      Text(
-                        "442",
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      SizedBox(width: 2),
-                      Text(
-                        "ppm",
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(width: 8),
-                      Image.asset(
-                        "assets/images/home/moisture.png",
-                        fit: BoxFit.contain,
-                        width: 16,
-                      ),
-                      SizedBox(width: 4),
-                      Text(
-                        "Soil Moisture",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 4),
-                  Row(
-                    children: [
-                      Text(
-                        "23",
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      SizedBox(width: 2),
-                      Text(
-                        "%",
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
+
+          monitoringRow(
+            "assets/images/home/co2.png",
+            "CO2 Level",
+            "442",
+            "ppm",
           ),
-          SizedBox(height: 80),
-          Row(
-            children: [
-              Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(width: 8),
-                      Image.asset(
-                        "assets/images/home/ph.png",
-                        fit: BoxFit.contain,
-                        width: 16,
-                      ),
-                      SizedBox(width: 4),
-                      Text(
-                        "Soil pH",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 4),
-                  Row(
-                    children: [
-                      Text(
-                        "8.3",
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      SizedBox(width: 2),
-                      Text(
-                        "ph",
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(width: 30),
-                      Image.asset(
-                        "assets/images/home/water.png",
-                        fit: BoxFit.contain,
-                        width: 16,
-                      ),
-                      SizedBox(width: 4),
-                      Text(
-                        "Water Level",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 4),
-                  Row(
-                    children: [
-                      Text(
-                        "23",
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      SizedBox(width: 2),
-                      Text(
-                        "%",
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
+          SizedBox(height: 32),
+          monitoringRow(
+            "assets/images/home/moisture.png",
+            "Soil Moisture",
+            "23",
+            "%",
+          ),
+
+          SizedBox(height: 30),
+
+          // BOTTOM GROUP
+          monitoringRow("assets/images/home/ph.png", "Soil pH", "8.3", "ph"),
+          SizedBox(height: 30),
+          monitoringRow(
+            "assets/images/home/water.png",
+            "Water Level",
+            "23",
+            "%",
           ),
         ],
       ),
@@ -319,9 +162,47 @@ Widget environmentMonitoring() {
   );
 }
 
+Widget monitoringRow(String icon, String label, String value, String unit) {
+  return SizedBox(
+    width: double.infinity,
+
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+      children: [
+        Row(
+          children: [
+            SizedBox(width: 12),
+            Image.asset(icon, width: 16),
+            SizedBox(width: 4),
+            Text(
+              label,
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Text(
+              value,
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+            ),
+            SizedBox(width: 2),
+            Text(
+              unit,
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+            ),
+            SizedBox(width: 20),
+          ],
+        ),
+      ],
+    ),
+  );
+}
+
 Widget controls() {
   return Container(
-    height: 306,
+    height: 336,
 
     width: 150,
     decoration: BoxDecoration(
@@ -346,11 +227,11 @@ Widget controls() {
                 children: [
                   Text(
                     "Climate",
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
                   ),
                   Text(
                     "Control",
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
                   ),
                 ],
               ),
@@ -412,6 +293,26 @@ Widget controls() {
             children: [
               Text(
                 "Bio-Electric",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+              ),
+              Transform.scale(
+                scale: 0.5,
+                child: Switch(
+                  value: true,
+                  onChanged: (value) => false,
+                  activeTrackColor: Colors.green.shade500,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          padding: EdgeInsetsGeometry.fromLTRB(10, 0, 0, 0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Ventillation",
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
               ),
               Transform.scale(

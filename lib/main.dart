@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/controls.dart';
+import 'control/index.dart';
 import 'data.dart';
 import 'home/index.dart';
 import 'navbar/index.dart';
