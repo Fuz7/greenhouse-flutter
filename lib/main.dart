@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'control/index.dart';
-import 'data.dart';
+import 'crop/index.dart';
 import 'home/index.dart';
 import 'navbar/index.dart';
 import 'navbar/header.dart';
@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> _screens = const [
     HomeTab(),
     ControlScreen(),
-    DataScreen(),
+    CropScreen(),
     PlantsScreen(),
     ProfileScreen(),
   ];
