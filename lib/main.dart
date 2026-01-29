@@ -6,7 +6,7 @@ import 'navbar/index.dart';
 import 'navbar/header.dart';
 import 'profile.dart';
 
-import 'plants.dart';
+import 'data/index.dart';
 
 void main() {
   runApp(MyApp());
@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
     HomeTab(),
     ControlScreen(),
     CropScreen(),
-    PlantsScreen(),
+    DataScreen(),
     ProfileScreen(),
   ];
   @override
