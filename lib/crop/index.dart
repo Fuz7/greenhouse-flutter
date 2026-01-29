@@ -65,10 +65,11 @@ class _CropSelectionState extends State<CropSelectionState> {
       children: [
         Container(
           width: double.infinity,
-          height: 255,
+          height: 256,
           decoration: BoxDecoration(
-            color: Color.fromRGBO(240, 130, 130, 1),
+            color: Color.fromRGBO(255, 255, 255, 1),
             borderRadius: BorderRadius.circular(10),
+            border: BoxBorder.all(color: Colors.black, width: 1),
           ),
           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
           child: Row(
@@ -198,10 +199,11 @@ class _CropSelectionState extends State<CropSelectionState> {
         SizedBox(height: 20),
         Container(
           width: double.infinity,
-          height: 255,
+          height: 256,
           decoration: BoxDecoration(
             color: Color.fromRGBO(240, 130, 130, 1),
             borderRadius: BorderRadius.circular(10),
+            border: BoxBorder.all(color: Colors.black, width: 1),
           ),
           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
           child: Row(

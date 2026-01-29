@@ -4,7 +4,7 @@ import 'crop/index.dart';
 import 'home/index.dart';
 import 'navbar/index.dart';
 import 'navbar/header.dart';
-import 'profile.dart';
+import 'profile/index.dart';
 
 import 'data/index.dart';
 
